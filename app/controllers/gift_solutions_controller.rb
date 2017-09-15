@@ -1,10 +1,11 @@
 get '/gifts' do
   #list all the gifts
-
+ erb :'/gifts/index'
 end
 
 get '/gifts/new' do
   #show form to add a new gift to the database of all the gifts
+  erb :'/gifts/new'
 end
 
 post '/gifts' do
