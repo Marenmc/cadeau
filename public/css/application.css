@@ -1,0 +1,35 @@
+.navbar {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #C71585;
+  float: right;
+}
+
+h1.site-heading {
+  font-family: "Courier New";
+}
+
+.navbar a {
+  float: right;
+}
+
+.navbar a {
+  display: block;
+  color: #C71585;
+  padding: 2px 16px;
+  vertical-align: top;
+}
+
+.recommendation {
+  border: solid #C71585;
+  border-width: 0.5px;
+  padding: 25px;
+}
+
+.past-recommendations {
+  border: solid #C71585;
+  border-width: 0.5px;
+  padding: 25px;
+}

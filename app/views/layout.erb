@@ -18,26 +18,33 @@
   <title></title>
 </head>
 <body>
+    <img src="images/gift-logo.png" alt="gift" height="32" width="32" style= "padding-top: 0.5cm">
   <div class="navbar">
-  <nav>
+    <div>
+    </div>
     <ul>
     <% if logged_in? %>
       <% @user = current_user %>
         Welcome, <%= @user.first_name %>
+      <nav>
         <form action="/logout" method="post">
           <input type="hidden" name="_method" value="DELETE">
           <input type="submit" value="Logout">
         </form>
+      </nav>
     <% else %>
+      <nav>
       <a href="/users/new">Register</a>
       <a href="/users/login">Log in</a>
+      </nav>
     <% end%>
     </ul>
-  </nav>
   </div>
-  <div>
-    <%= erb :'/_errors' %>
-  </div>
-  <%= yield %>
+  <main id="site-content" role="main">
+    <div>
+     <%= erb :'/_errors' %>
+   </div>
+    <%= yield %>
+  </main>
 </body>
 </html>

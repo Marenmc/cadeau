@@ -13,8 +13,17 @@ end
 
 post '/recommendations' do
   #take in the data from the recommendation form
-
-  redirect "recommendations/#{@rec.id}"
+  @rec = Recommendation.new
+  if logged_in?
+    if @rec.save
+      redirect "recommendations/#{@rec.id}"
+    else
+      @errors = @rec.errors.full_messages
+      erb :'/_errors'
+    end
+  else
+    redirect "/users/login"
+  end
 end
 
 get '/recommendations/:id' do
