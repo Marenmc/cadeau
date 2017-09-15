@@ -1,4 +1,15 @@
 <h1>Welcome, <%= @user.first_name %></h1>
-<h3>Here are your past recommendations</h3>
+
+
+
+<div class="recommendation">
+  <p>Generate a new recommendation:</p>
+  <%= erb :'/recommendations/_new' %>
+</div>
+<br>
+<br>
+<div class="past-recommendations">
+  <h3>Here are your past recommendations</h3>
+</div>
 
 

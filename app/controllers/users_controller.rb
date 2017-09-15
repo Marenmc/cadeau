@@ -23,6 +23,8 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
+  giphy = GiphyAdapter.new
+  @gif = giphy.search("gift").sample
   if logged_in?
     erb :'/users/show'
   else

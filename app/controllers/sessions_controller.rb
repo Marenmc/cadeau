@@ -4,6 +4,7 @@ get '/users/login' do
 end
 
 post '/login' do
+  p ENV["SECRET_THING"]
   p params
   #This is saying "look in the username column (key) for the param's username"
   @user = User.find_by(username: params[:user][:username])

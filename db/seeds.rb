@@ -1,0 +1,7 @@
+User.create! = {
+  username: "Matilda"
+
+
+
+
+};
